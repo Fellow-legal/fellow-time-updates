@@ -3,6 +3,14 @@
     <channel>
         <title>Fellow Time</title>
         <item>
+            <title>1.0.10</title>
+            <pubDate>Mon, 21 Sep 2026 16:07:30 +0000</pubDate>
+            <sparkle:version>1.0.10</sparkle:version>
+            <sparkle:shortVersionString>1.0.10</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>10.13</sparkle:minimumSystemVersion>
+            <enclosure url="https://github.com/Fellow-legal/fellow-time-updates/releases/download/v1.0.10/FellowTime-1.0.10.zip" length="57638374" type="application/octet-stream" sparkle:edSignature="/37/r2duoPNI+wfqzJJyLLAeFL9WH93e/84auwln1EMji1G+CJBeN525/TnFSNLdLW7YyeUZDItUSIsPI9vLDA=="/>
+        </item>
+        <item>
             <title>1.0.9</title>
             <pubDate>Mon, 21 Sep 2026 14:58:44 +0000</pubDate>
             <sparkle:version>1.0.9</sparkle:version>
@@ -17,14 +25,6 @@
             <sparkle:shortVersionString>1.0.8</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>10.13</sparkle:minimumSystemVersion>
             <enclosure url="https://github.com/Fellow-legal/fellow-time-updates/releases/download/v1.0.8/FellowTime-1.0.8.zip" length="57480999" type="application/octet-stream" sparkle:edSignature="qs9ch462/dHE38gFkCi/AWPjuW+4LkzmxSKsmnXH8z34xsMlMJRsdxh2LOCnJtA6O6vbtFkQ5+PWcSEZ0i7PBA=="/>
-        </item>
-        <item>
-            <title>1.0.7</title>
-            <pubDate>Tue, 15 Sep 2026 23:00:35 +0000</pubDate>
-            <sparkle:version>1.0.7</sparkle:version>
-            <sparkle:shortVersionString>1.0.7</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>10.13</sparkle:minimumSystemVersion>
-            <enclosure url="https://github.com/Fellow-legal/fellow-time-updates/releases/download/v1.0.7/FellowTime-1.0.7.zip" length="57453323" type="application/octet-stream" sparkle:edSignature="yiArzgZ29nAZv+ajUwxnPcX0peRoTUdhsUlVodNH4qSQv1495uE7vd8E0c100GsHFnVMz52sJnNmjKoRjzkDAw=="/>
         </item>
     </channel>
 </rss>
