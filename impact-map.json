@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "service": "fellow-time-updates",
+  "rules": [
+    {
+      "id": "release-artifact-contracts",
+      "paths": [
+        ".fellow/automation-components.json",
+        ".github/pull_request_template.md",
+        "appcast.xml",
+        "impact-map.json",
+        "scenario-contract.json",
+        "test-env.json",
+        "tests/test_repository_contract.py"
+      ],
+      "scenario_ids": [],
+      "check_ids": ["release-artifact-contracts"],
+      "roles": []
+    }
+  ]
+}
