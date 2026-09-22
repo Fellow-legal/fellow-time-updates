@@ -1,0 +1,27 @@
+{
+  "project": "fellow-time-updates",
+  "service": "fellow-time-updates",
+  "services": {},
+  "gate": {
+    "status": "ready",
+    "deployment_mode": "dependency_only",
+    "drift_project": "fellow-time-updates",
+    "local_checks": [
+      {
+        "id": "release-artifact-contracts",
+        "check_kind": "deterministic_check",
+        "argv": ["python3", "-B", "-munittest", "discover", "-s", "tests"],
+        "timeout_seconds": 60
+      }
+    ],
+    "test_runner": {
+      "id": "release-artifact-selected-tests",
+      "check_kind": "deterministic_check",
+      "argv_prefix": ["python3", "-B", "-munittest"],
+      "timeout_seconds": 60
+    },
+    "roles": {},
+    "provider_checks": [],
+    "manual_checks": []
+  }
+}
