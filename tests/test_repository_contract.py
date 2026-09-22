@@ -45,6 +45,7 @@ class RepositoryContractTests(unittest.TestCase):
             {
                 ".fellow/automation-components.json",
                 ".github/pull_request_template.md",
+                ".gitignore",
                 "appcast.xml",
                 "impact-map.json",
                 "scenario-contract.json",

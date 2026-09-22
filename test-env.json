@@ -10,14 +10,14 @@
       {
         "id": "release-artifact-contracts",
         "check_kind": "deterministic_check",
-        "argv": ["python3", "-munittest", "discover", "-s", "tests"],
+        "argv": ["python3", "-B", "-munittest", "discover", "-s", "tests"],
         "timeout_seconds": 60
       }
     ],
     "test_runner": {
       "id": "release-artifact-selected-tests",
       "check_kind": "deterministic_check",
-      "argv_prefix": ["python3", "-munittest"],
+      "argv_prefix": ["python3", "-B", "-munittest"],
       "timeout_seconds": 60
     },
     "roles": {},
