@@ -12,6 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 class RepositoryContractTests(unittest.TestCase):
     def test_manifest_declares_delivery_without_an_application_component(self):
+        """Track release work without inventing a reportable component."""
         manifest = json.loads(
             (ROOT / ".fellow/automation-components.json").read_text()
         )
@@ -28,6 +29,7 @@ class RepositoryContractTests(unittest.TestCase):
         )
 
     def test_pull_request_template_contains_one_delivery_record(self):
+        """Require a single structured delivery example in the PR template."""
         template = (ROOT / ".github/pull_request_template.md").read_text()
         self.assertEqual(template.count("## Fellow delivery"), 1)
         match = re.search(r"## Fellow delivery\s+```json\s+(.*?)\s+```", template, re.S)
@@ -37,6 +39,7 @@ class RepositoryContractTests(unittest.TestCase):
         self.assertEqual(records[0]["component_keys"], [])
 
     def test_impact_map_covers_every_owned_contract_path(self):
+        """Route changes to release metadata through the local contract check."""
         impact_map = json.loads((ROOT / "impact-map.json").read_text())
         self.assertEqual(impact_map["version"], 2)
         self.assertEqual(impact_map["service"], "fellow-time-updates")
@@ -54,7 +57,15 @@ class RepositoryContractTests(unittest.TestCase):
             }.issubset(paths)
         )
 
+    def test_gate_commands_do_not_write_python_bytecode(self):
+        """Keep the exact-head gate clean after it runs local Python checks."""
+        gate = json.loads((ROOT / "test-env.json").read_text())["gate"]
+        for check in gate["local_checks"]:
+            self.assertIn("-B", check["argv"])
+        self.assertIn("-B", gate["test_runner"]["argv_prefix"])
+
     def test_appcast_is_valid_xml_with_signed_release_enclosures(self):
+        """Reject malformed appcast XML or unsigned release entries."""
         root = ET.parse(ROOT / "appcast.xml").getroot()
         items = root.findall("./channel/item")
         self.assertTrue(items)
