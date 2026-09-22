@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "repository": "Fellow-legal/fellow-time-updates",
+  "delivery_tracking": {
+    "enabled": true,
+    "source": "github_pull_requests",
+    "start_date": "2026-10-01"
+  },
+  "components": []
+}
